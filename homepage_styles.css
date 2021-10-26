@@ -1,0 +1,777 @@
+body {
+  /* background-color: rgb(235, 235, 235); */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('static/img/1.png');
+  /* background-repeat: no-repeat;
+  background-size: auto; */
+}
+.navigation-bar {
+  /* align-items: top; */
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(31, 31, 31, 0.603);
+  /* background-color: red; */
+  backdrop-filter: blur(6px);
+  position: sticky;
+  /* overflow: hidden; */
+  top: 0;
+  width:100%;
+  height: 48px;
+  border-radius: 3px;
+  }
+.course_class {
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 1000px;
+}
+.navigation-bar a {
+
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    /* background-color: rgba(31, 31, 31, 0.719); */
+  }
+  .navigation-bar ul {
+    background-color: rgba(31, 31, 31, 0);
+    backdrop-filter: blur(6px);
+  }
+.navigation-bar li {
+  /* background-color: rgba(31, 31, 31, 0.719); */
+  backdrop-filter: blur(6px);
+    float: left;
+    transition: display 1s;
+  }
+
+
+/* Change the link color to #111 (black) on hover */
+.navigation-bar a:hover {
+    background-color: rgba(17, 17, 17, 0.61);
+    transition: backgroud-color 5s;
+    
+  }
+  
+  .navbar-right{
+    background-color: rgb(17, 100, 148);
+    float: right;
+    margin-right: 5px;
+  }
+  .navbar-right a{
+    background-color: rgb(19, 116, 172);
+    float: right;
+    transition: background-color 1s;
+  }
+  .navbar-right a:hover{
+    background-color: rgb(8, 66, 100);
+    cursor: pointer;
+    float: right;
+  }
+  .navigation-bar .icon_hamburger {
+    display: none;
+  }
+
+  /* Screen size smaller than 700px => Hide all other li's other than search and home
+  and display hamburger menu */
+  @media screen and (max-width: 700px) {
+    .navigation-bar li:not(:nth-child(3),:first-child) {display: none;}
+    .navigation-bar a.icon_hamburger {
+      float: right;
+      /* position: fixed;
+      right: 0px; */
+      display: block;
+    }
+    .navigation-bar {
+      overflow: visible;
+    }
+  }
+  /* Screen size smaller than 450px => Hide all other li's other home (first child) */
+  @media screen and (max-width: 450px) {
+    .navigation-bar li:not(:first-child) {display: none;}
+  }
+  
+  /* Screen size smaller than 700px =>  */
+  @media screen and (max-width: 700px) {
+    .navigation-bar.responsive2 {position: relative;}
+    .navigation-bar.responsive2 .icon_hamburger {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navigation-bar.responsive2 li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navigation-bar.responsive2 li span {
+      float: top;
+      display: block;
+      text-align: left;
+      /* background-color: grey; */
+    }
+    .navigation-bar.responsive2 li div a {
+      
+      /* background-color: aquamarine; */
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    /* Clear space for search bar in hamburger menu */
+    .user_access {
+      margin-top: 0px;
+    }
+  }
+  
+  
+  /* Style the search box inside the navigation bar */
+  .search-box {
+    padding-left: 0px;
+    height: 48px;
+    border-radius: 10px;
+    margin-left: -10px;
+    padding-right: 5px;
+  }
+  #search_global {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    color: white;
+  }
+  #search_global:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+  }
+  .navigation-bar input[type=text] {
+    /* color: #111; */
+    background-color: rgba(17, 17, 17, 0.438);
+    backdrop-filter: blur(6px);
+    float: left;
+    /* margin-left: 30%;
+    margin-right: 30%; */
+    padding: 6px;
+    border: 1px solid;
+    margin-top: 5px;
+    margin-right: 16px;
+    padding-left: 10px;
+    font-size: 17px;
+  }
+  
+  .icon_hamburger{
+    color: white;
+  }
+.inner-addon { 
+  position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: relative;
+  color: aliceblue;
+  padding: 0px;
+  padding-top: -2px;
+  top:-2px;
+  left:auto;
+  right:auto;
+  cursor: pointer;
+}
+.inner-addon button {
+  position: absolute;
+  color: rgba(240, 248, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 10px;
+  padding-top: 13px;
+  height:50px;
+  width:50px;
+  /* padding-left:-15px; */
+  cursor: pointer;
+}
+.inner-addon button:hover {
+  background-color: rgba(26, 10, 10, 0.767);
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.footer {
+  /* margin-top: 100px; */
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(11, 58, 85, 0.753);
+  color: white;
+  text-align: center;
+  bottom: -7;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 10px 0px 10px 0px;
+  backdrop-filter: blur(6px);
+}
+.footer span {
+  padding: 10px;
+}
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip2 .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*html {*/
+  /* background-color: green; */
+  /* background-image: 'static/img/java.png'; */
+  /*}*/
+  
+div.gallery {
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.397);
+  transition: background-color 1s;
+  margin-bottom: 30px;
+  border-radius: 0.5ch;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* margin: 1px; */
+}
+
+div.gallery:hover {
+  /* border: 1px solid #777; */
+  background-color: rgba(120, 173, 182, 0.555);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.desc {
+  /* width: 500px;
+  height: 200px; */
+  height: 100px;;
+}
+div.gallery img {
+  /* width: 100%; */
+  /* height: auto; */
+  /* filter: drop-shadow(1px 0px 2px black); */
+  /* border: 2px solid rgba(0, 0, 0, 0.116); */
+  height: 150px;
+  width: 100%;
+  padding-top: 10%;
+
+  /* background-color: rgb(206, 206, 206);
+  */
+  /* background-image: linear-gradient(rgb(160, 160, 160), rgb(235, 235, 235)); */
+  object-fit: contain;
+  border-radius: 0.5ch;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+/* LOGIN FORM CSS */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+     float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+/* body {font-family: Arial, Helvetica, sans-serif;} */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Set a style for all buttons */
+.login_form_button {
+  background-color: #1589be;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.login_form_button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #ad160b;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  width: 100%;
+}
+
+
+.login_form {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  /* background-color: rgb(0,0,0); */
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.login_form-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%;
+  
+}
+
+/* Video Player for the course content */
+.player_close_button {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #00000062;
+  border: none;
+  color: rgba(199, 199, 199, 0.726);
+  border-radius: 100px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  transition: background-color 1s;
+}
+.player_close_button:hover {
+  background-color: #0000008e;
+  cursor: pointer;
+}
+.player_background {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.video_player {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  /* left:50%; */
+  
+}
+
+
+
+.menu_header {
+  width: 160px;
+  /* height: 50px; */
+  padding-left : 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+  color: white;
+  /* margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px; */
+  /* background-color: #ad160b; */
+}
+/* Filters for videos */
+.dropdown {
+  display: inline;
+  /* background-color: #f1f1f1; */
+}
+/* .dropdown:hover .dropdown-content {
+  background-color: #1589be;
+  left: 0px;
+  z-index: 1;
+} */
+
+#video_filter_s {
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  /* display: inline-block; */
+  margin-left: 50px;
+  display: none;
+  position: fixed;
+  /* background-color: #f9f9f9; */
+  /* min-width: 160px; */
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: rgba(68, 154, 212, 0.945);
+  border-radius: 5px;
+}
+.dropdown-content a {
+  display: inline-block;
+  text-decoration: none;
+  /* float: left; */
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  /* margin-top: 10px; */
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+  /* margin-top: 10px; */
+  /* background-color: #888; */
+}
+.dropdown-content a:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.search_dropdown {
+  display: inline-block;
+  margin-left: 250;
+  /* display: none; */
+  position: fixed;
+  /* background-color: #f9f9f9; */
+  /* min-width: 160px; */
+  width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: rgba(136, 189, 224, 0.945);
+  border-radius: 5px;
+}
+.search_dropdown a {
+  display: inline-block;
+  text-decoration: none;
+  /* float: left; */
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  /* margin-top: 10px; */
+  width: 240px;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  /* margin-top: 10px; */
+  /* background-color: #888; */
+}
+.search_dropdown a:hover {
+  background-color: rgb(46, 46, 46);
+}
+/* h1 {
+  background-color: whitesmoke;
+  position: static;
+  filter: drop-shadow(0px 2px 3px black);
+  height: 70px;
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 700px;
+} */
+.navigation-bar {
+  
+  filter: drop-shadow(0px 5px 10px black);
+  
+}
+.navbar-right a {
+  border-radius: 1px;
+}
+.logout_nav a {
+  background-color: rgb(4, 175, 55);
+  color:black;
+}
+.logout_nav a:hover{
+  background-color: rgba(0, 92, 28, 0.836);
+}
+
+body {
+  background-color: white;
+}
+
+
+
+
+  
+  #enroll_btn {background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%)}
+  #enroll_btn {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.63);
+     border: none;
+     border-radius: 10px;
+     /* margin-left: 100px; */
+     display: block;
+    }
+    
+   #enroll_btn:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
+   .container_checkbox {
+    /* display: block; */
+    position: relative;
+    margin-left: 20px;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container_checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container_checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container_checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container_checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+   
+.regd_users_dropdown {
+  display: inline-block;
+  right: 0;
+  margin-right: 10;
+  padding-left: 0;
+  list-style: none;
+  /* display: none; */
+  position: fixed;
+  /* background-color: #f9f9f9; */
+  /* min-width: 160px; */
+  text-align: center;
+  width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: rgba(136, 189, 224, 0.945);
+  border-radius: 5px;
+}
+.regd_users_dropdown li {
+  /* position: relative; */
+  /* right: 10; */
+  /* padding-right: 100; */
+  display: inline-block;
+  text-decoration: none;
+  /* float: left; */
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  /* margin-top: 10px; */
+  width: 240px;
+  height: 30px;
+  border-radius: 5px;
+  /* overflow:; */
+  /* margin-top: 10px; */
+  /* background-color: #888; */
+}
+.regd_users_dropdown li:hover {
+  background-color: rgba(0, 204, 255, 0.555);
+}
+.user_details_dropdown {
+  display: inline-block;
+  right: 0;
+  margin-right: 0;
+  padding-left: 0;
+  list-style: none;
+  /* display: none; */
+  position: fixed;
+  /* background-color: #f9f9f9; */
+  /* min-width: 160px; */
+  text-align: center;
+  width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.288);
+  color: black;
+  border-radius: 5px;
+  backdrop-filter: blur(6px);
+}
+.user_details_dropdown a {
+  /* position: relative; */
+  /* right: 10; */
+  /* padding-right: 100; */
+  display: inline-block;
+  text-decoration: none;
+  /* float: left; */
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  /* margin-top: 10px; */
+  width: 240px;
+  height: 30px;
+  border-radius: 5px;
+  cursor:pointer;
+  /* overflow:; */
+  /* margin-top: 10px; */
+  /* background-color: #888; */
+}
+/* .user_details_dropdown a:hover { */
+  /* background-color: rgba(0, 204, 255, 0.555); */
+/* } */
+.logout_link {
+  background-color: rgba(255, 230, 0, 0.514);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  cursor: context-menu;
+  padding-top:5px;
+  border: 1px solid rgb(187, 168, 0);
+}
+.logout_link:hover{
+  background-color: rgba(126, 128, 0, 0.836);
+}
+.deregister_link {
+  background-color: rgba(119, 0, 0, 0.74);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  cursor: context-menu;
+}
+.deregister_link:hover{
+  background-color: rgba(128, 0, 0, 0.836);
+}
+
+.unenroll_btn {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
+.unenroll_btn {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   /* text-transform: uppercase; */
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px rgb(54, 10, 10);
+   border-radius: 10px;
+   display: block;
+   border: none;
+ }
+
+ .unenroll_btn:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
